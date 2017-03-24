@@ -1,10 +1,13 @@
-# spring boot 正则模式加载属性文件(properites)
-# jdk 1.8 
-# 使用方式
+# let spring boot autoload property files with  wildcards
+(spring boot 支持通配符方式加载配置文件)
+# jdk 1.8 (需要jdk 1.8)
+# how to use(如何使用)
 
-1、引入工程依赖
+
+1、import project
    
-2、在标注有@SpringBootApplication注解的上面添加@ImportPropertie注解
+
+2、add  `@ImportPropertie` on the class which has  `@SpringBootApplication`
 ```java
 @SpringBootApplication
 @ImportResource({"classpath:config/spring*.xml", "classpath:spring*.xml"})
